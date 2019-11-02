@@ -1,0 +1,12 @@
+package pratti_p1;
+import java.io.*; 
+import java.util.*; 
+
+public class DuplicateRemover {
+
+	public void remove(String dataFile) throws IOException { 
+		BufferedReader reader = new BufferedReader(new FileReader(dataFile)); 
+		
+		
+	}
+}

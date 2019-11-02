@@ -1,0 +1,34 @@
+package pratti_p1;
+
+import java.io.*;
+import java.util.*;
+
+public class DuplicateRemover {
+	 ArrayList<String> uniqueWords = new ArrayList<String>();
+
+	 public void remove(String fileName) throws IOException {
+		 BufferedReader reader = new BufferedReader(new FileReader(fileName));
+		 String lines = reader.readLine();
+		 while(lines != null){
+			 String temp[] = lines.split(" ");
+	   
+			 for(String i:temp){
+				 if(!uniqueWords.contains(i)) { 
+					 uniqueWords.add(i);
+				 }
+			 }
+			 lines = reader.readLine();
+		 }
+
+		 reader.close();
+	  }
+
+	   public void write(String fileName) throws FileNotFoundException {
+	       PrintWriter writer = new PrintWriter(fileName);
+	       for(String i:uniqueWords) {
+	    	   
+	    	   writer.println(i);
+	       }
+	       writer.close();
+	   }
+}

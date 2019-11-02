@@ -1,0 +1,22 @@
+package pratti_p1;
+
+import java.io.IOException;
+import java.io.*;
+
+public class Application {
+
+	public static void main(String[] args) throws IOException { //add exception
+        //use of DuplicateCounter by calling both the remove and write methods
+        DuplicateCounter duplicateCounter = new DuplicateCounter(); 
+
+        //input file = problem2.txt
+        //output file = unique_word_counts.txt
+
+        duplicateCounter.remove("problem2.txt"); //input file
+        duplicateCounter.write("unique_word_counts.txt"); //output file
+
+        System.out.println("End of program"); 
+
+    }
+
+}
